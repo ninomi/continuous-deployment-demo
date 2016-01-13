@@ -21,7 +21,7 @@ from api_key import key
 # [START app]
 @app.route('/get_author/<title>')
 def get_author(title):
-    host = 'https://www.googleapis.com/books/v1/volumes?q={}&key={}&country=US'.format(title, key)
+    host = 'https://www.googleapis.com/books/v1/volumes'.format(title, key)
     request = urllib2.Request(host)
     try:
         response = urllib2.urlopen(request)
