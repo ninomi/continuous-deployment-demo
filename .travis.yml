@@ -14,7 +14,6 @@ before_install:
 - if [ ! -d "${GAE_PYTHONPATH}" ]; then python scripts/fetch_gae_sdk.py $(dirname
   "${GAE_PYTHONPATH}"); fi
 - curl https://sdk.cloud.google.com | bash;
-  fi
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
 - gcloud auth activate-service-account --key-file client-secret.json
